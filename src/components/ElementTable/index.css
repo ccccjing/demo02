@@ -1,0 +1,71 @@
+.element-wrapper-table .search-area {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.element-wrapper-table .search-area .search-form {
+  margin: 20px 0;
+  float: left;
+}
+
+.element-wrapper-table .search-area .search-form .title {
+  display: inline-block;
+  max-width: 120px;
+  min-width: 80px;
+  width: 90px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.element-wrapper-table .search-area .search-form ::v-deep .el-input, .element-wrapper-table .search-area .search-form .el-select, .element-wrapper-table .search-area .search-form .el-date-editor {
+  width: 280px;
+  margin-top: 10px;
+}
+
+.element-wrapper-table .search-area .search-btns {
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.element-wrapper-table ::v-deep .el-table--border th {
+  background: #eee;
+  color: #7c7c7c;
+  border-color: #ddd;
+  padding: 6px 0;
+  line-height: 24px;
+}
+
+.element-wrapper-table ::v-deep .el-table--border th .cell div {
+  line-height: 20px;
+}
+
+.element-wrapper-table ::v-deep .el-table--border td {
+  border-color: #ddd;
+  color: #353535;
+}
+
+.element-wrapper-table ::v-deep .el-pagination {
+  margin-top: 20px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.element-wrapper-table ::v-deep .operates {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.element-wrapper-table ::v-deep .operates span, .element-wrapper-table ::v-deep .operates a {
+  text-decoration: none;
+  margin: 0 6px;
+  cursor: pointer;
+  color: #1d8ce0;
+}
+
+.element-wrapper-table ::v-deep .operates span:hover, .element-wrapper-table ::v-deep .operates a:hover {
+  color: #218bd6;
+}

@@ -24,6 +24,12 @@ const tableRouter = {
       component: () => import('@/views/table/inline-edit-table'),
       name: 'InlineEditTable',
       meta: { title: '编辑表格' }
+    },
+    {
+      path: 'currency-table',
+      component: () => import('@/views/table/currency-table'),
+      name: 'CurrencyTable',
+      meta: { title: '通用表格' }
     }
   ]
 }

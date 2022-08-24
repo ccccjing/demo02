@@ -44,5 +44,6 @@ export default {
   width: 100%;
   padding: 0 20px;
   height: calc(100% - 60px);
+  overflow: hidden;
 }
 </style>

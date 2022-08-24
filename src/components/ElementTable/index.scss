@@ -1,0 +1,65 @@
+.element-wrapper-table{
+    // margin: 0 20px;
+    .search-area {
+        overflow: hidden;
+        margin-bottom: 20px;
+       .search-form{
+            margin: 20px 0;
+            float: left;
+            .title{
+                display: inline-block;
+                max-width: 120px;
+                min-width: 80px;
+                width: 90px;
+                padding-left: 20px;
+                text-align: center;
+            }
+            ::v-deep .el-input,.el-select,.el-date-editor{
+                width: 280px;
+                margin-top: 10px;
+            }
+        }
+        .search-btns{
+            float: right;
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+    }
+    ::v-deep .el-table--border th {
+        background: #eee;
+        color: #7c7c7c;
+        border-color: #ddd;
+        padding: 6px 0;
+        line-height: 24px;
+        .cell {
+          div {
+            line-height: 20px;
+          }
+        }
+      }
+    ::v-deep .el-table--border td {
+        border-color: #ddd;
+        color: #353535;
+      }
+    ::v-deep .el-pagination{
+        margin-top: 20px;
+        margin-right: 20px;
+        text-align: right;
+    }
+    ::v-deep .operates {
+      display: inline-block;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: clip;
+      overflow: hidden;
+      span,a {
+        text-decoration: none;
+        margin: 0 6px;
+        cursor: pointer;
+        color: #1d8ce0;
+        &:hover {
+          color: #218bd6;
+        }
+      }
+    }
+}
