@@ -7,6 +7,9 @@
 
 <template>
   <el-form ref="workForm" :rules="rules" :model="workForm" label-width="100px" class="demo-ruleForm">
+    <el-form-item label="导出文件名" prop="fileName">
+      <el-input v-model="workForm.fileName"></el-input>
+    </el-form-item>
     <el-form-item label="单位" prop="company">
       <el-input v-model="workForm.company"></el-input>
     </el-form-item>
@@ -59,6 +62,7 @@ export default {
   data () {
     return {
       workForm: {
+        fileName: '',
         company: '',
         name: '',
         sex: '',
@@ -71,6 +75,9 @@ export default {
         work: '',
       },
       rules: {
+        fileName: [
+          { max: 50, message: '不超过50个字符', trigger: 'blur' }
+        ],
         company: [
           { required: true, message: '请输入单位', trigger: 'blur' },
           { max: 50, message: '不超过50个字符', trigger: 'blur' }
@@ -123,7 +130,7 @@ export default {
       // 模板
       let docxsrc = '/work.docx'
       // 导出文件名
-      let docxName = '工作证明.docx'
+      let docxName = data.fileName + '.docx' || '工作证明.docx'
 
       // 读取模板并转为二进制
       JSZipUtils.getBinaryContent(docxsrc, function(error, content) {

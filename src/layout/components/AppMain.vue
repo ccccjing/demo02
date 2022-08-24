@@ -45,5 +45,6 @@ export default {
   padding: 0 20px;
   height: calc(100% - 60px);
   overflow: hidden;
+  overflow-y: auto;
 }
 </style>
