@@ -6,6 +6,7 @@ Vue.use(Router);
 import Layout from '@/layout'
 
 import tableRouter from "./modules/table";
+import exportRouter from "./modules/export";
 
 export const constantRoutes = [
   {
@@ -31,7 +32,8 @@ export const constantRoutes = [
     component: () => import('@/views/error/401.vue'),
     hidden: true
   },
-  tableRouter
+  tableRouter,
+  exportRouter
 ]
 
 export const asyncRoutes = [

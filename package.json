@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "docxtemplater": "^3.31.2",
     "element-ui": "^2.14.1",
+    "file-saver": "^2.0.5",
+    "jszip-utils": "^0.1.0",
+    "pizzip": "^3.1.1",
     "vue": "^2.6.11",
     "vue-router": "^3.5.4",
     "vuex": "^3.6.2"
