@@ -9,7 +9,7 @@ import store from './store/index'
 import router from './router/routes'
 
 import './icons'
-// import './permission'
+import './permission'
 
 Vue.config.productionTip = false
 

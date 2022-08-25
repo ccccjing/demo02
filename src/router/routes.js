@@ -11,6 +11,17 @@ import codeRouter from "./modules/code";
 
 export const constantRoutes = [
   {
+    path: '/redirect',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/redirect/:path(.*)',
+        component: () => import('@/views/redirect')
+      }
+    ]
+  },
+  {
     path: '/',
     component: Layout,
     redirect: '/home',
@@ -31,6 +42,11 @@ export const constantRoutes = [
   {
     path: '/401',
     component: () => import('@/views/error/401.vue'),
+    hidden: true
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/login'),
     hidden: true
   },
   tableRouter,
