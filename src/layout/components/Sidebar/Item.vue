@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .sub-el-icon {
   /* color: currentColor; */
   font-size: 20px;
@@ -50,7 +50,6 @@ export default {
 }
 .el-icon-s-claim ~span {
   font-size: 15px;
-  margin-left: 16px;
 }
 li {
   display: list-item;

@@ -105,7 +105,12 @@ export default {
 }
 /deep/ .el-menu-item [class^=el-icon-] ~span {
   font-size: 15px;
-  margin-left: 16px;
+}
+/deep/ .el-submenu [class^=el-icon-] {
+  font-size: 20px;
+}
+/deep/ .el-submenu__icon-arrow.el-icon-arrow-right {
+  display: none;
 }
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {

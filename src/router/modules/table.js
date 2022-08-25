@@ -5,7 +5,7 @@ const tableRouter = {
   component: Layout,
   redirect: '/table/complex-table',
   name: 'Table',
-  meta: { title: '表格', icon: 'el-icon-s-claim' },
+  meta: { title: '表格管理', icon: 'el-icon-s-claim' },
   children: [
     {
       path: 'complex-table',
