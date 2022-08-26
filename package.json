@@ -3,17 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "chalk": "^2.4.2",
+    "chokidar": "^3.5.3",
     "core-js": "^3.6.5",
     "docxtemplater": "^3.31.2",
     "element-ui": "^2.14.1",
     "file-saver": "^2.0.5",
     "js-cookie": "^3.0.1",
     "jszip-utils": "^0.1.0",
+    "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "pizzip": "^3.1.1",
     "qrcodejs2": "0.0.2",

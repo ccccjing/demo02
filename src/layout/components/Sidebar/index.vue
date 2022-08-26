@@ -39,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('permission/generateRoutes', ['admin'])
+    // this.$store.dispatch('permission/generateRoutes', ['admin'])
     console.log(this.permission_routes)
   }
 };

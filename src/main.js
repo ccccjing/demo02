@@ -11,6 +11,9 @@ import router from './router/routes'
 import './icons'
 import './permission'
 
+const { mockXHR } = require('../mock')
+mockXHR()
+
 Vue.config.productionTip = false
 
 new Vue({
