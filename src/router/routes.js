@@ -50,12 +50,11 @@ export const constantRoutes = [
     hidden: true
   },
   tableRouter,
-  exportRouter,
-  codeRouter
+  exportRouter
 ]
 
 export const asyncRoutes = [
-  // tableRouter
+  codeRouter
 ]
 
 let routerPush = Router.prototype.push;

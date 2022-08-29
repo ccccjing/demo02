@@ -5,7 +5,7 @@ const codeRouter = {
   component: Layout,
   redirect: '/code/qr-code',
   name: 'Code',
-  meta: { title: '条码管理', icon: 'el-icon-postcard' },
+  meta: { title: '条码管理', icon: 'el-icon-postcard', roles: 'admin' },
   children: [
     {
       path: 'qr-code',
