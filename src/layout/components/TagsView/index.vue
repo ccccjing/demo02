@@ -23,12 +23,12 @@
         <span v-if="!isAffix(tag)" class="el-icon-close" @click.prevent.stop="closeSelectedTag(tag)" />
       </router-link>
     </scroll-pane>
-    <!-- <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
-      <li @click="refreshSelectedTag(selectedTag)">Refresh</li>
-      <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">Close</li>
-      <li @click="closeOthersTags">Close Others</li>
-      <li @click="closeAllTags(selectedTag)">Close All</li>
-    </ul> -->
+    <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
+      <li @click="refreshSelectedTag(selectedTag)">刷新页面</li>
+      <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">关闭当前页面</li>
+      <li @click="closeOthersTags">关闭其他页面</li>
+      <li @click="closeAllTags(selectedTag)">关闭所有页面</li>
+    </ul>
   </div>
 </template>
 
@@ -183,7 +183,7 @@ export default {
       const offsetLeft = this.$el.getBoundingClientRect().left // container margin left
       const offsetWidth = this.$el.offsetWidth // container width
       const maxLeft = offsetWidth - menuMinWidth // left boundary
-      const left = e.clientX - offsetLeft + 15 // 15: margin right
+      const left = e.clientX - offsetLeft + 115 // 15: margin right
 
       if (left > maxLeft) {
         this.left = maxLeft
@@ -191,7 +191,7 @@ export default {
         this.left = left
       }
 
-      this.top = e.clientY
+      this.top = e.clientY + 20
       this.visible = true
       this.selectedTag = tag
     },
