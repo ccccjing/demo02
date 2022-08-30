@@ -1,14 +1,13 @@
 import router from './router/routes'
 import store from './store'
 import { Message } from 'element-ui'
-import NProgress from 'nprogress' // progress bar
-import 'nprogress/nprogress.css' // progress bar style
-import { getToken } from '@/utils/auth' // get token from cookie
-// import getPageTitle from '@/utils/get-page-title'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+import { getToken } from '@/utils/auth'
 
-NProgress.configure({ showSpinner: false }) // NProgress Configuration
+NProgress.configure({ showSpinner: false })
 
-const whiteList = ['/login', '/auth-redirect'] // no redirect whitelist
+const whiteList = ['/login', '/auth-redirect']
 
 router.beforeEach(async(to, from, next) => {
   NProgress.start()
@@ -24,8 +23,9 @@ router.beforeEach(async(to, from, next) => {
         next()
       } else {
         try {
+          // 获取用户信息
           const { roles } = await store.dispatch('user/getInfo', hasToken)
-
+          // 初始化路由
           const accessRoutes = await store.dispatch('permission/generateRoutes', roles)
 
           router.addRoutes(accessRoutes)
@@ -33,7 +33,7 @@ router.beforeEach(async(to, from, next) => {
           next({ ...to, replace: true })
         } catch (error) {
           console.log(error)
-          // remove token and go to login page to re-login
+          // 重定向
           await store.dispatch('user/resetToken')
           Message.error(error || 'Has Error')
           next(`/login?redirect=${to.path}`)
@@ -42,13 +42,9 @@ router.beforeEach(async(to, from, next) => {
       }
     }
   } else {
-    /* has no token*/
-
     if (whiteList.indexOf(to.path) !== -1) {
-      // in the free login whitelist, go directly
       next()
     } else {
-      // other pages that do not have permission to access are redirected to the login page.
       next(`/login?redirect=${to.path}`)
       NProgress.done()
     }
@@ -56,6 +52,6 @@ router.beforeEach(async(to, from, next) => {
 })
 
 router.afterEach(() => {
-  // finish progress bar
+  // 关闭加载条
   NProgress.done()
 })

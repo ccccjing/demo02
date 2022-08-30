@@ -75,6 +75,7 @@ export default {
   font-size: 14px;
   top: 0;
   right: 65px;
+  cursor: pointer;
 }
 // .el-icon-setting {
 //   margin-right: 15px;
@@ -86,6 +87,7 @@ export default {
   display: inline-block;
   width: 60px;
   height: 60px;
+  cursor: pointer;
   img {
     width: 36px;
     height: 36px;
