@@ -18,7 +18,13 @@ const exportRouter = {
       component: () => import('@/views/export/excel-file'),
       name: 'ExcelFile',
       meta: { title: 'Excel' }
-    }
+    },
+    {
+      path: 'word-table-file',
+      component: () => import('@/views/export/word-table-file'),
+      name: 'WordTableFile',
+      meta: { title: 'WordTable' }
+    },
   ]
 }
 

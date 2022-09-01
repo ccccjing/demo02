@@ -157,7 +157,7 @@ export default {
             stack: error.stack,
             properties: error.properties
           }
-          console.log(JSON.stringify({ error: e}))
+          console.log(JSON.stringify({ error: e }))
           throw error
         }
 
