@@ -30,6 +30,12 @@ const tableRouter = {
       component: () => import('@/views/table/currency-table'),
       name: 'CurrencyTable',
       meta: { title: '通用表格' }
+    },
+    {
+      path: 'upload-excel',
+      component: () => import('@/views/table/upload-excel'),
+      name: 'UploadExcel',
+      meta: { title: '导入表格' }
     }
   ]
 }
