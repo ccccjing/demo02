@@ -9,7 +9,7 @@
     <TagsView></TagsView>
     <el-main>
       <transition name="fade-transform" mode="out-in">
-        <keep-alive>
+        <keep-alive :include="cachedViews">
           <router-view :key="key"></router-view>
         </keep-alive>
       </transition>
@@ -26,6 +26,9 @@ export default {
     TagsView
   },
   computed: {
+    cachedViews() {
+      return this.$store.state.tagsView.cachedViews
+    },
     key() {
       return this.$route.path;
     },
