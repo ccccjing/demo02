@@ -7,3 +7,11 @@ export function getList(query) {
     params: query
   })
 }
+
+export function getStaffList(query) {
+  return request({
+    url: '/api/article/staffList',
+    method: 'get',
+    params: query
+  })
+}

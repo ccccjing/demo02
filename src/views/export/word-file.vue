@@ -8,25 +8,25 @@
 <template>
   <el-form ref="workForm" :rules="rules" :model="workForm" label-width="100px" class="demo-ruleForm">
     <el-form-item label="导出文件名" prop="fileName">
-      <el-input v-model="workForm.fileName"></el-input>
+      <el-input v-model="workForm.fileName" clearable></el-input>
     </el-form-item>
     <el-form-item label="单位" prop="company">
-      <el-input v-model="workForm.company"></el-input>
+      <el-input v-model="workForm.company" clearable></el-input>
     </el-form-item>
     <el-form-item label="姓名" prop="name">
-      <el-input v-model="workForm.name"></el-input>
+      <el-input v-model="workForm.name" clearable></el-input>
     </el-form-item>
     <el-form-item label="性别" prop="sex">
-      <el-select v-model="workForm.sex">
+      <el-select v-model="workForm.sex" clearable>
         <el-option label="男" value="男"></el-option>
         <el-option label="女" value="女"></el-option>
       </el-select>
     </el-form-item>
     <el-form-item label="政治面貌" prop="politicalOutlook">
-      <el-input v-model="workForm.politicalOutlook"></el-input>
+      <el-input v-model="workForm.politicalOutlook" clearable></el-input>
     </el-form-item>
     <el-form-item label="身份证号" prop="idNumber">
-      <el-input v-model="workForm.idNumber"></el-input>
+      <el-input v-model="workForm.idNumber" clearable></el-input>
     </el-form-item>
     <el-form-item label="时间" prop="date">
       <el-date-picker
@@ -38,13 +38,14 @@
         end-placeholder="结束日期"
         value-format="yyyy/MM/dd"
         @change="getDate"
+        clearable
       ></el-date-picker>
     </el-form-item>
     <el-form-item label="部门" prop="department">
-      <el-input v-model="workForm.department"></el-input>
+      <el-input v-model="workForm.department" clearable></el-input>
     </el-form-item>
     <el-form-item label="职位" prop="work">
-      <el-input v-model="workForm.work"></el-input>
+      <el-input v-model="workForm.work" clearable></el-input>
     </el-form-item>
     <el-button type="primary" @click="submitForm()">导出</el-button>
     <el-button @click="resetForm()">重置</el-button>
@@ -130,7 +131,7 @@ export default {
       // 模板
       let docxsrc = '/work.docx'
       // 导出文件名
-      let docxName = data.fileName + '.docx' || '工作证明.docx'
+      let docxName = data.fileName ? data.fileName + '.docx' : '工作证明.docx'
 
       // 读取模板并转为二进制
       JSZipUtils.getBinaryContent(docxsrc, function(error, content) {

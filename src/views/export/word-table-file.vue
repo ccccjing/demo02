@@ -12,6 +12,7 @@
         v-model="fileName"
         placeholder="文件名"
         class="export-input"
+        clearable
       />
       <el-button
         :loading="downloadLoading"
@@ -133,6 +134,7 @@ export default {
     },
     // 导出数据
     handleDownload(data) {
+      this.downloadLoading = true
       // 模板文件
       let docxsrc = '/table.docx'
       // 导出文件名
@@ -176,6 +178,7 @@ export default {
 
         // 将目标文件的对象保存为目标类型的文件，并命名
         saveAs(out, docxName)
+        this.downloadLoading = false
       })
     }
   },
