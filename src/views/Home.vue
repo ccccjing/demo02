@@ -50,5 +50,6 @@ export default {
 .box {
   width: 600px;
   height: 200px;
+  margin: 0 auto;
 }
 </style>
