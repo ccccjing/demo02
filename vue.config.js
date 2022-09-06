@@ -4,4 +4,7 @@ module.exports = {
     open: false,
     before: require('./mock/mock-server.js')
   },
+  publicPath: "./",
+  outputDir: 'dist',
+  assetsDir: 'static',
 }

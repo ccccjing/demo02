@@ -1,6 +1,6 @@
 const state = {
   sidebar: {
-    open: true
+    open: true // 左侧菜单展开
   }
 }
 

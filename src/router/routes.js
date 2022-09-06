@@ -57,12 +57,14 @@ export const asyncRoutes = [
   codeRouter
 ]
 
+// 防止多次点击路由报错
 let routerPush = Router.prototype.push;
 Router.prototype.push = function push(location) {
   return routerPush.call(this, location).catch(err => err);
 }
 
 export default new Router({
+  mode: 'hash',
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })
