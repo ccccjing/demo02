@@ -183,6 +183,12 @@ export default {
   },
   mounted() {
     this.getData()
+  },
+  activated() {
+    console.log('activated')
+  },
+  deactivated() {
+    console.log('deactivated')
   }
 }
 </script>

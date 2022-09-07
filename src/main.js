@@ -7,6 +7,7 @@ import App from './App.vue'
 import './plugins'
 import store from './store/index'
 import router from './router/routes'
+import './directives'
 
 import './icons'
 import './permission'
