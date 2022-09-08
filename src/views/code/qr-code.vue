@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     creatQrCode() {
-      let text = 'https://juejin.cn/post/6844903719255932936'
+      let text = this.str || 'http://39.99.51.240/#/login?redirect=%2Fhome'
       new QRCode(this.$refs.qrcode, {
         text: text, // 内容
         width: 128, // 宽
@@ -40,7 +40,10 @@ export default {
       this.$refs.qrcode.innerHTML = ''
     },
     updateQrCode() {
-      this.$refs.qrcode.makeCode(this.str)
+      // this.$refs.qrcode.makeCode(this.str)
+      console.log('update code')
+      this.clearQrCode()
+      this.creatQrCode()
     }
   },
   mounted() {
