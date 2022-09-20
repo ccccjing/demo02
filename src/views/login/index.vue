@@ -47,17 +47,19 @@
         <input class="button" type="submit" value="登录" /> -->
         <el-button
           type="primary"
-          style="width:100%;margin-bottom:30px;"
+          style="width:100%"
           @click.native.prevent="handleLogin"
           size="mini"
         >注册</el-button>
         <el-button
           type="primary"
-          style="width:100%;margin-bottom:30px;"
+          style="width:100%"
           @click.native.prevent="handleLogin"
           :loading='loading'
         >登录</el-button>
       </div>
+      <span class="user">admin: 123456&nbsp;&nbsp;</span>
+      <span class="user">editor: 123456</span>
     </el-form>
   </div>
 </template>
@@ -310,6 +312,10 @@ export default {
         color: #fff;
         cursor: pointer;
       }
+    }
+    .user {
+      float: left;
+      top: 50px;
     }
   }
 }
