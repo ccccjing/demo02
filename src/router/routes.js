@@ -8,6 +8,7 @@ import Layout from '@/layout'
 import tableRouter from "./modules/table";
 import exportRouter from "./modules/export";
 import codeRouter from "./modules/code";
+import charts from './modules/charts'
 
 export const constantRoutes = [
   {
@@ -54,7 +55,8 @@ export const constantRoutes = [
 ]
 
 export const asyncRoutes = [
-  codeRouter
+  codeRouter,
+  charts
 ]
 
 // 防止多次点击路由报错
