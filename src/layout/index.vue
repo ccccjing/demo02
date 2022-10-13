@@ -10,7 +10,7 @@
   </el-container> -->
   <div class="box">
     <Top></Top>
-    <el-container style="height: 875px">
+    <el-container style="height: 90%">
       <Sidebar></Sidebar>
       <el-container>
         <AppMain></AppMain>

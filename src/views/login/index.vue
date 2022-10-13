@@ -242,7 +242,7 @@ export default {
     width: 40%;
     max-width: 380px;
     min-width: 350px;
-    height: 28%;
+    height: 40%;
     padding: 20px;
     background-color: #50a3a2;
     opacity: .8;
